@@ -24,22 +24,25 @@ module.exports = appInfo => {
     // myAppName: 'egg',
   };
 
-  const news = {
+  exports.news = {
     pageSize: 10,
     serverUrl: 'https://hacker-news.firebaseio.com/v0',
   }
 
-  const view = {
+  exports.view = {
     defaultViewEngine: 'nunjucks',
     mapping: {
       '.tpl': 'nunjucks',
     },
   };
 
+  exports.mysql = {
+    enable: true,
+    package: 'egg-mysql',
+  };
+
   return {
     ...config,
     ...userConfig,
-    view,
-    news
   };
 };
