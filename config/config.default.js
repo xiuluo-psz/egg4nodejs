@@ -3,6 +3,7 @@
 'use strict';
 
 /**
+ * 默认配置
  * @param {Egg.EggAppInfo} appInfo app info
  */
 module.exports = appInfo => {
@@ -23,8 +24,22 @@ module.exports = appInfo => {
     // myAppName: 'egg',
   };
 
+  const news = {
+    pageSize: 10,
+    serverUrl: 'https://hacker-news.firebaseio.com/v0',
+  }
+
+  const view = {
+    defaultViewEngine: 'nunjucks',
+    mapping: {
+      '.tpl': 'nunjucks',
+    },
+  };
+
   return {
     ...config,
     ...userConfig,
+    view,
+    news
   };
 };
