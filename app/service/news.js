@@ -28,7 +28,7 @@ class NewsService extends Service {
     //   }),
     // );
     // return newsList.map((res) => res.data);
-    return [{ a: 1 }, { b: 2 }]
+    return [{ url: 'https://www.baidu.com', title: '百度网址' }]
   }
 }
 
