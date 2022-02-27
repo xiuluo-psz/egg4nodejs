@@ -44,6 +44,9 @@ module.exports = appInfo => {
     agent: false,
   };
 
+  config.middleware = ['errorHandler'];
+  config.errorHandler = { match: '/api' }
+
   exports.news = {
     pageSize: 10,
     serverUrl: 'https://hacker-news.firebaseio.com/v0',

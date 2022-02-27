@@ -12,6 +12,8 @@ module.exports = app => {
   router.get('/user/update', controller.user.update);
   router.get('/user/delete', controller.user.delete);
 
+  app.router.resources('topics', '/api/v2/topics', app.controller.topics);
+
   // 鉴权成功后的回调页面
   router.get('/authCallback', controller.home.authCallback);
 
